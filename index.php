@@ -102,7 +102,7 @@ function getNetwork($sNumber) {
     <label>Enter 4 digit number: <input type="text" name="network"></label>
     <button type="submit">Check</button>
     <div>
-        <?php if isset($_GET['network']) { ?>
+        <?php if (isset($_GET['network'])) { ?>
             Network is: <?php getNetwork($_GET['network']); ?>
         <?php } ?>
     </div>
