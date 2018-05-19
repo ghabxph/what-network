@@ -91,6 +91,8 @@ function getNetwork($sNumber) {
     return (substr($sNetwork) === 0) ? 'Unknown network' : $sNetwork;
 }
 
+$sNetwork = htmlspecialchars(@$_GET['network'], ENT_QUOTES);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -99,7 +101,7 @@ function getNetwork($sNumber) {
 </head>
 <body>
 <form>
-    <label>Enter 4 digit number: <input type="text" name="network"></label>
+    <label>Enter 4 digit number: <input type="text" name="network" value="<?php echo $sNetwork ?>"></label>
     <button type="submit">Check</button>
     <div>
         <?php if (isset($_GET['network'])) { ?>
