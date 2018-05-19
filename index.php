@@ -103,7 +103,7 @@ function getNetwork($sNumber) {
     <button type="submit">Check</button>
     <div>
         <?php if (isset($_GET['network'])) { ?>
-            Network is: <?php getNetwork($_GET['network']); ?>
+            Network is: <?php echo getNetwork($_GET['network']); ?>
         <?php } ?>
     </div>
 </form>
