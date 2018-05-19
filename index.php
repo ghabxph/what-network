@@ -88,7 +88,7 @@ function getNetwork($sNumber) {
     // Retrieves the network (ABS/G, something like that)
     $sNetwork = @$network[$idx1][$idx2];
 
-    return (substr($sNetwork) === 0) ? 'Unknown network' : $sNetwork;
+    return (strlen($sNetwork) === 0) ? 'Unknown network' : $sNetwork;
 }
 
 $sNetwork = htmlspecialchars(@$_GET['network'], ENT_QUOTES);
